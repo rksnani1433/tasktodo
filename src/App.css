@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-container{
+  background-color: #282c34;
+  height: 100vh;
+  padding: 20px;
+}
+.goal-add{
+  padding: 10px;
+  border-radius: 10px;  
+  font-family: sans-serif;
+}
+.goal-submit{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: sans-serif;
+
+}
+.edit-icon{
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.goal-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item{
+  list-style-type: none;
+  display: flex;
+  color:white;
+  font-family: sans-serif;
+  align-items: center;
+  background-color: rgb(75, 41, 85);
+  justify-content: space-between;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.delete-icon{
+  color:red;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.delete-icon:hover, .edit-icon:hover {
+  background-color: #6c6e74;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+.todo-name{
+  padding: 5px;
+  margin: 5px;
+}
+
+.todo-list-container {
+  overflow: auto; 
+  max-height: calc(100vh - 180px); 
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .goal-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .goal-add {
+    width: 100%;
+  }
+  .goal-submit {
+    width: 6rem;
+    margin-top: 10px;
+  }
+  .todo-list-container {
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+  }
+}
